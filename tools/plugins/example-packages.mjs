@@ -18,11 +18,16 @@ function run(args,cwd) {
 }
 const catalog=JSON.parse(await readFile(join(root,'catalog.json'),'utf8'));
 assert.equal(catalog.schemaVersion,2);
-for (const name of ['gallery','steam']) {
+for (const {directory:name} of catalog.plugins) {
   const source=join(root,name);
   const manifest=JSON.parse(await readFile(join(source,'manifest.json'),'utf8'));
   const entry=catalog.plugins.find(item=>item.directory===name);
   assert.ok(entry && entry.id===manifest.id && entry.version===manifest.version && entry.apiVersion===manifest.apiVersion,'Git catalog must match the committed package');
+  assert.match(manifest.presentation?.symbol ?? '', /^[a-zA-Z0-9.]+$/, 'A system symbol is required');
+  for (const locale of ['en', 'zh-Hans']) {
+    assert.ok(manifest.localizedNames?.[locale]?.trim(), 'A title is required for '+locale);
+    assert.equal(entry.localizedNames?.[locale], manifest.localizedNames[locale]);
+  }
   const temporary=mode==='test' ? await mkdtemp(join(tmpdir(),'mactv-example-')) : undefined;
   const work=temporary ? join(temporary,name) : source;
   try {

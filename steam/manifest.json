@@ -1,7 +1,7 @@
 {
   "id": "community.steam",
   "name": "Steam",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "apiVersion": 2,
   "entry": "plugin.js",
   "domains": [],
@@ -26,8 +26,11 @@
   "presentation": {
     "symbol": "gamecontroller.fill",
     "tint": "indigo",
-    "summary": "Open Steam Big Picture",
     "availability": "preview",
     "showOnHome": true
+  },
+  "localizedNames": {
+    "en": "Steam Big Picture",
+    "zh-Hans": "Steam 大屏"
   }
 }

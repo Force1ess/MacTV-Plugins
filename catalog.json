@@ -4,22 +4,15 @@
   "name": "MacTV Official",
   "plugins": [
     {
-      "id": "community.gallery",
-      "name": "Gallery",
-      "version": "0.3.0",
-      "apiVersion": 2,
-      "directory": "gallery",
-      "localizedNames": {
-        "en": "Gallery",
-        "zh-Hans": "相册"
-      }
-    },
-    {
       "id": "community.steam",
       "name": "Steam",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "apiVersion": 2,
-      "directory": "steam"
+      "directory": "steam",
+      "localizedNames": {
+        "en": "Steam Big Picture",
+        "zh-Hans": "Steam 大屏"
+      }
     }
   ]
 }
