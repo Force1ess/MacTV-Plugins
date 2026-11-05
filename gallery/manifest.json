@@ -1,0 +1,28 @@
+{
+  "id": "community.gallery",
+  "name": "Gallery",
+  "localizedNames": {
+    "en": "Gallery",
+    "zh-Hans": "相册"
+  },
+  "version": "0.3.0",
+  "apiVersion": 2,
+  "entry": "plugin.js",
+  "domains": [],
+  "capabilities": [
+    "browse",
+    "search",
+    "folders",
+    "library"
+  ],
+  "nativeLibraries": [
+    "photos"
+  ],
+  "presentation": {
+    "symbol": "photo.on.rectangle.angled",
+    "tint": "orange",
+    "summary": "Browse pictures in your selected media sources",
+    "availability": "preview",
+    "showOnHome": true
+  }
+}

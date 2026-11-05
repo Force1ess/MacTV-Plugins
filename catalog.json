@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 2,
+  "id": "org.mactv.official",
+  "name": "MacTV Official",
+  "plugins": [
+    {
+      "id": "community.gallery",
+      "name": "Gallery",
+      "version": "0.3.0",
+      "apiVersion": 2,
+      "directory": "gallery",
+      "localizedNames": {
+        "en": "Gallery",
+        "zh-Hans": "相册"
+      }
+    },
+    {
+      "id": "community.steam",
+      "name": "Steam",
+      "version": "0.3.0",
+      "apiVersion": 2,
+      "directory": "steam"
+    }
+  ]
+}

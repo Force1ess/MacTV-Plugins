@@ -1,0 +1,33 @@
+{
+  "id": "community.steam",
+  "name": "Steam",
+  "version": "0.3.0",
+  "apiVersion": 2,
+  "entry": "plugin.js",
+  "domains": [],
+  "capabilities": [
+    "browse",
+    "launch"
+  ],
+  "applicationLaunch": {
+    "bundleID": "com.valvesoftware.steam",
+    "url": "steam://open/bigpicture",
+    "returnWhen": "matched-window-closes",
+    "windowTitles": [
+      "Steam Big Picture Mode"
+    ],
+    "preferredPresentation": "fullscreen",
+    "readyWhen": "visible-window",
+    "instructions": {
+      "en": "Open Steam Big Picture. MacTV returns when its window closes; Accessibility access is used to observe this window.",
+      "zh-Hans": "打开 Steam 大屏模式；关闭大屏窗口后返回 MacTV。观察窗口需要辅助功能权限。"
+    }
+  },
+  "presentation": {
+    "symbol": "gamecontroller.fill",
+    "tint": "indigo",
+    "summary": "Open Steam Big Picture",
+    "availability": "preview",
+    "showOnHome": true
+  }
+}

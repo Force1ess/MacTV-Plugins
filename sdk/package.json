@@ -1,0 +1,11 @@
+{
+  "name": "mactv-plugin-sdk",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "types": "./index.d.ts",
+  "exports": {".": {"types": "./index.d.ts", "import": "./index.mjs"}},
+  "files": ["index.mjs", "index.d.ts", "README.md", "LICENSE"],
+  "scripts": {"check": "tsc --noEmit", "test": "npm run check && node --test test/*.test.mjs"},
+  "devDependencies": {"typescript": "5.9.3"}
+}

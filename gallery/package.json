@@ -1,0 +1,16 @@
+{
+  "name": "mactv-gallery-example",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "exports": "./build/core.mjs",
+  "scripts": {
+    "build": "esbuild src/core.ts --bundle --format=esm --platform=neutral --target=es2020 --outfile=build/core.mjs && esbuild src/mactv.ts --bundle --format=iife --global-name=plugin --platform=neutral --target=es2020 --outfile=plugin.js && node tools/pack.mjs",
+    "check": "tsc --noEmit",
+    "test": "npm run check && npm run build && node --test test/*.test.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "typescript": "5.9.3"
+  }
+}

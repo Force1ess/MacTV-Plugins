@@ -1,0 +1,9 @@
+{
+  "name": "mactv-plugins",
+  "private": true,
+  "version": "0.3.0",
+  "scripts": {
+    "build": "node tools/plugins/example-packages.mjs build",
+    "test": "node tools/plugins/example-packages.mjs test"
+  }
+}
